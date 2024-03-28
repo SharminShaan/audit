@@ -1,0 +1,174 @@
+categories table
+category_name
+
+sub_categories table
+cat_id, sub_cat_name,
+
+child_categories table
+cat_id, sub_cat_id, child_cat_name, image
+
+
+
+
+1. contents table:
+
+id, cat_id, sub_cat_id, child_cat_id, type,
+
+            about us
+//:team
+name, designation, short_description, long_description,email,phone, experience, image, image2, image3,,image4, image5,image6,logo,
+//
+company profile:
+// title, file(pdf,doc), youtube,
+
+new sticker:
+subtitle,doc_upload
+
+// career:
+job_title,vacancy,age,education, experience, responsibilities,compensation,
+employment_status, location
+
+event:
+date,time,venue
+
+
+//
+
+2. blog table
+// title,date,uploaded_by,blog_category,comment,long_description,short_description,blockquote,image,tags
+
+3. blog_category_table
+blog_cat_name
+
+
+4. registers_table
+type(1=event,2=professtional,3=articleship,4=contact,5=pdf_download),
+type_id,type_name,name,email,phone,address,others,doc_file,service_type,long_description
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+crud form:
+page setup crud:
+title, short_description,image,image2,image3,child_cat_id
+
+
+===about us==
+
+company profile:
+title, file(pdf,doc),image, youtube,short_description,long_description,
+
+
+team:
+name, designation, short_description, email,phone, experience, image,
+
+affiliation:
+title, long_description,image
+
+enlistment:
+title, name, logo
+
+membership:
+title,long_description,image
+
+====services===
+
+audit & assurance:
+name,short_description
+
+taxation & vat:
+name
+
+advisory:
+name
+
+secretarial:
+name
+
+business service:
+name
+
+human resource service:
+name
+
+training & development:
+title, short_description
+
+===client====
+sub_cat_id,
+
+newsletter/e-bulletin,new sticker:
+title, subtitle,long_description, image,doc_upload(pdf,doc)
+
+publications:
+title, doc_upload
+
+gallary:
+title, short_description, image,image2,image3,image4, image5,image6
+
+events:
+title, long_description, image, doc_upload,date,time,venue
+
+
+career:
+job_title,vacancy,age,education, experience, responsibilities,compensation,
+employment_status, location,date(deadline)
+
+regulators:
+title,long_description,image,logo
+
+contact us:
+title,address,phone,email,
+
+
+
+blog:
+title,date,uploaded_by,blog_cat_name,comment,long_description,short_description,blockquote,image,tags
+
+blog_category
+blog_cat_name
+
+### Registration form:
+
+// event: name,email,phone,address, hidden(type_id,type_name,type=1)
+//professional: name,email,phone,doc_file, hidden(type_id,type_name,type=2)
+//articleship: name,email,phone,doc_file, hidden(type_id,type_name,type=3)
+/publicationp-Download: name,email,phone, hidden(type_id,type_name,type=5)
+
+//contact:name,email,phone,service_type,long_description,hidden(type=4)
+
+
+
+

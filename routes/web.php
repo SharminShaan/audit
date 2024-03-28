@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\backend\BackendHome;
+use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\homepage\WhoweareController;
 use App\Http\Controllers\backend\SliderController;
 use App\Http\Controllers\backend\ThemeOptionsController;
@@ -35,7 +36,6 @@ Route::get('/home', [BackendHome::class, 'index'])->name('backend.index');
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
-    Route::resource('products', ProductController::class);
 });
 
 /*********************** frontend design route *******************
@@ -60,6 +60,8 @@ Route::get('/japanese-client', [FrontendController::class, 'japaneseclient']);
 // media page start
 Route::get('/newsletter', [FrontendController::class, 'newsletter']);
 Route::get('/blog', [FrontendController::class, 'blog']);
+
+
 
 /*********************** backend  route *******************
   ****************************************************************/
@@ -86,3 +88,13 @@ Route::get('/blog', [FrontendController::class, 'blog']);
 //   Route::get('/slider/edit/{id}', [SliderController::class, 'edit'])->name('slider.edit');
 //   Route::post('/slider/update/{id}', [SliderController::class, 'update'])->name('slider.update');
 //   Route::get('/slider/delete/{id}', [SliderController::class, 'destroy'])->name('slider.delete');
+
+// category
+Route::get('/category/index', [CategoryController::class, 'index'])->name('category.index');
+Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
+Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
+Route::put('/category/update/{id}', [CategoryController::class, 'update'])->name('category.update');
+Route::delete('/category/delete/{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
+
+
