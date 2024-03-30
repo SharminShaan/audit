@@ -52,28 +52,15 @@
                     <label for="button_text">Slider Button</label>
                     <input type="text" class="form-control" id="button_text" name="button_text"  value="{{$slideredit->button_text}}">
                   </div>
+
+
                   <div class="form-group">
-                    <label for="exampleInputFile">Current Image</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="slideimage" name="slideimage"  value="{{$slideredit->slideimage}}">
-                       <img src="{{asset('backendsite/images/slider/'.$slideredit->slideimage)}}" width="200px" alt="">
-                      </div>
-                    </div>
+                    <label for="exampleInputFile">Slide Image</label>
+                    <input type="file" class="form-control" name="slideimage">
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputFile">Choose Image</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="slideimage" name="slideimage"  value="{{$slideredit->slideimage}}">
-                        <label class="custom-file-label" for="slideimage" >Choose file</label>
-                      </div>
-                    </div>
-                  </div>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
+                <img src="{{asset('backendsite/images/slider/'.$slideredit->slideimage)}}" width="100px" alt="slider">
+
+
               </div>
               <!-- /.card-body -->
 

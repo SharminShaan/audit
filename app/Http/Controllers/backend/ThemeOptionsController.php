@@ -17,7 +17,6 @@ class ThemeOptionsController extends Controller
     {
         $seeting = ThemeOptions::where('id', '=', 1)->first();
         return view('backend.themeoptions.index',compact('seeting'));
-        // return view('backend.themeoptions.index');
     }
 
     /**
@@ -84,19 +83,8 @@ class ThemeOptionsController extends Controller
         $seeting->twitter = $request->twitter;
         $seeting->googleplus = $request->googleplus;
         $seeting->youtube = $request->youtube;
+        $seeting->vmap = $request->vmap;
 
-        // if($request->file('logo')){
-        //     $file = $request->file('logo');
-        //     $file_extension = $file->getClientOriginalExtension();
-        //     $random_no = str::random(12);
-        //     $file_name = $random_no.'.'.$file_extension;
-        //     $destination_path = public_path().'/backendsite/images';
-        //     $request->file('logo')->move($destination_path,$file_name);
-        //     $seeting->logo= $file_name;
-        // }
-        // $request->validate([
-        //     'logo' => 'image|mimes:jpeg,png,jpg,gif,svg',
-        // ]);
 
         if ($request->file('logo')) {
             $imageName = time() . '.' . $request->logo->extension();
@@ -105,16 +93,6 @@ class ThemeOptionsController extends Controller
         } else {
             unset($seeting->logo);
         }
-
-        // if ($image = $request->file('logo')) {
-        //     $destinationPath = '/backendsite/images/';
-        //     $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-        //     $image->move($destinationPath, $profileImage);
-        //     $seeting->logo = $profileImage;
-        //     // dd($seeting->logo);
-        // } else {
-        //     unset($seeting->logo );
-        // }
 
 
         $seeting->save();

@@ -84,11 +84,6 @@ Route::get('/blog', [FrontendController::class, 'blog']);
   Route::get('/whoweare', [WhoweareController::class, 'index'])->name('homepage.whoweare');
   Route::post('/whoweare/update', [WhoweareController::class, 'update'])->name('whoweare.update');
 
-//   Route::get('/slider/create', [SliderController::class, 'create'])->name('slider.create');
-//   Route::post('/slider/store', [SliderController::class, 'store'])->name('slider.store');
-//   Route::get('/slider/edit/{id}', [SliderController::class, 'edit'])->name('slider.edit');
-//   Route::post('/slider/update/{id}', [SliderController::class, 'update'])->name('slider.update');
-//   Route::get('/slider/delete/{id}', [SliderController::class, 'destroy'])->name('slider.delete');
 
 // category
 Route::get('/category/index', [CategoryController::class, 'index'])->name('category.index');

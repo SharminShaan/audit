@@ -55,18 +55,9 @@
                   <div class="form-group">
                     <label for="exampleInputFile">Slide Image</label>
                     <input type="file" class="form-control" name="slideimage">
-                    {{-- <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="slideimage" name="slideimage">
-                        <label class="custom-file-label" for="slideimage" >Choose file</label>
-                      </div>
-                    </div> --}}
                   </div>
 
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
+
               </div>
               <!-- /.card-body -->
 

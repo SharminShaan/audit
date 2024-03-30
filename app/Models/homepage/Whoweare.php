@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Whoweare extends Model
 {
     use HasFactory;
-    
+
 }

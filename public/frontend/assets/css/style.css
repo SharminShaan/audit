@@ -1,42 +1,6 @@
-/*
-  Theme Name: Gerow - Business Consulting HTML Template
-  Support: themedox@gmail.com
-  Description: Gerow - Business Consulting HTML Template.
-  Version: 1.0
-*/
-
-/* CSS Index
-============================
-01. Variable CSS
-02. Header
-03. Mobile Menu
-04. Search
-05. OffCanvas
-06. Slider
-07. Banner
-08. Breadcrumb
-09. About
-10. Overview
-11. Features
-12. Choose
-13. Services
-14. Cta
-15. Counter
-16. Estimate
-17. Project
-18. Faq
-19. Request
-20. Team
-21. Testimonial
-22. Pricing
-23. Contact
-24. Blog
-25. Brand
-26. Error
-27. Footer
-28. Preloader
-============================
-*/
+*{
+    text-align: justify;
+}
 
 
 
@@ -9255,58 +9219,7 @@ header{
     right: 0;
     top: 0;
 }
-.banner-follow-wrap {
-    display: flex;
-    align-items: center;
-    gap: 45px;
-    writing-mode: vertical-lr;
-    position: absolute;
-    right: 40px;
-    top: 50%;
-    transform: translateY(-50%) rotate(-180deg);
-    flex-direction: row-reverse;
-	position: fixed;
-    overflow: hidden;
-    z-index: 999;
-    background: #0b6777;
-	width: 40px;
-}
 
-.banner-follow-wrap .title {
-    color: var(--tg-section-background);
-    font-size: 15px;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    letter-spacing: 0.1em;
-    position: relative;
-    white-space: nowrap;
-}
-.banner-follow-wrap .title::before {
-    content: "";
-    position: absolute;
-    right: 55%;
-    transform: translateX(-50%);
-    top: -31px;
-    width: 2px;
-    height: 20px;
-    background: var(--tg-section-background);
-}
-.banner-follow-wrap .list-wrap {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-.banner-follow-wrap .list-wrap li {
-    transform: rotate(90deg);
-	border: 2px solid #fff;
-	padding: 8px;
-}
-.banner-follow-wrap .list-wrap li:hover{
-	background-color: #1097af;
-}
-.banner-follow-wrap .list-wrap li a {
-    color: var(--tg-section-background);
-}
 .banner-bg-nine {
     min-height: 840px;
     background-size: cover;
@@ -11734,15 +11647,6 @@ header{
 
 
 
-/* blog */
-.blog-bg-three {
-    background-size: cover;
-    background-position: center;
-    padding: 120px 0 90px;
-}
-.blog-post-thumb-two img {
-    transition: .3s linear;
-    width: 100%;
-    min-height: 275px;
-    object-fit: cover;
-}
+
+
+

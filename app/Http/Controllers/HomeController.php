@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\homepage\Whoweare;
 use App\Models\Slider;
 use App\Models\ThemeOptions;
 use Illuminate\Http\Request;
@@ -24,8 +25,10 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {    $seeting = ThemeOptions::findOrFail(1);
+    {
+        $seeting = ThemeOptions::findOrFail(1);
         $slider = Slider::all();
-        return view('frontend.index',compact('seeting','slider'));
+        $Whoweare = Whoweare::findOrFail(1);
+        return view('frontend.index', compact('seeting', 'slider', 'Whoweare'));
     }
 }

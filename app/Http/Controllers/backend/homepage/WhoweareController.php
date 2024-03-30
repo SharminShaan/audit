@@ -16,11 +16,19 @@ class WhoweareController extends Controller
     }
 
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+
     public function update(Request $request){
         $whoweare = Whoweare::findOrFail(1);
         // dd($whoweare);
-        $whoweare->subheading = $request->subheading;
         $whoweare->heading = $request->heading;
+        $whoweare->subheading = $request->subheading;
         $whoweare->paragraph = $request->paragraph;
         $whoweare->list1 = $request->list1;
         $whoweare->list2 = $request->list2;
@@ -30,33 +38,23 @@ class WhoweareController extends Controller
         $whoweare->years = $request->years;
         $whoweare->yearsparagraph = $request->yearsparagraph;
 
-        // $imageName = time() . '.' . $request->image1->extension();
-        // $request->image1->move(public_path('/backendsite/images/homepage/'), $imageName);
-        // $whoweare->image1 = $imageName;
-
-        // $imageName2 = time() . '.' . $request->image2->extension();
-        // $request->image2->move(public_path('/backendsite/images/homepage/'), $imageName2);
-        // $whoweare->image2 = $imageName2;
-
-        if ($image = $request->file('image1')) {
-            $destinationPath = '/backendsite/images/homepage/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            // $input['image1'] = "$profileImage";
-            $whoweare->image1 = $profileImage;
+        if ($request->file('image1')) {
+            $imageName = time() . '.' . $request->image1->extension();
+            $request->image1->move(public_path('/backendsite/images/homepage/'), $imageName);
+            $whoweare->image1 = $imageName;
         } else {
-            // unset($input['image1']);
             unset($whoweare->image1);
         }
 
-        if ($image = $request->file('image2')) {
-            $destinationPath = '/backendsite/images/homepage/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $whoweare->image2 = $profileImage;
+        if ($request->file('image2')) {
+            $rand = rand(10,100);
+            $imageName = time() . $rand. '.' . $request->image2->extension();
+            $request->image2->move(public_path('/backendsite/images/homepage/'), $imageName);
+            $whoweare->image2 = $imageName;
         } else {
             unset($whoweare->image2);
         }
+
 
         $whoweare->save();
         return redirect()->back();

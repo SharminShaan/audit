@@ -47,7 +47,7 @@
           <td>{{$row->button_text}}</td>
         <td>
             <a href="{{route('slider.edit',$row->id)}}" class="btn btn-success">Edit</a>
-            <a href="{{route('slider.delete',$row->id)}}" class="btn btn-danger">Delete</a>
+            <a onclick="alert('Are you sure want to delete?')"  href="{{route('slider.delete',$row->id)}}" class="btn btn-danger">Delete</a>
         </td>
         </tr>
         @endforeach

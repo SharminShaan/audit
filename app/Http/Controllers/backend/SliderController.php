@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+
 class SliderController extends Controller
 {
     /**
@@ -17,7 +18,7 @@ class SliderController extends Controller
     {
         $sliderData = Slider::all();
         // $sliderData = Slider::where('type', "=", '1')->get();
-        return view('backend.slider.index',compact('sliderData'));
+        return view('backend.slider.index', compact('sliderData'));
     }
 
     /**
@@ -45,19 +46,6 @@ class SliderController extends Controller
         $dataslider->button_text = $request->button_text;
         $dataslider->type = 1;
 
-        // $dataslider->slideimage = $request->slideimage;
-        // if($request->file('slideimage')){
-        //     $file = $request->file('slideimage');
-        //     $file_extension = $file->getClientOriginalExtension();
-        //     $random_no = str::random(12);
-        //     $file_name = $random_no.'.'.$file_extension;
-        //     $destination_path = public_path().'/backendsite/images/slider/';
-        //     $request->file('slideimage')->move($destination_path,$file_name);
-        //     $dataslider->slideimage= $file_name;
-        // }
-
-        // $dataslider->slideimage = $request->slideimage;
-
         $request->validate([
             'slideimage' => 'image|mimes:jpeg,png,jpg,gif,svg',
         ]);
@@ -68,8 +56,8 @@ class SliderController extends Controller
 
 
         $dataslider->save();
-        // return redirect()->route('backend.slider.index');
-        return redirect()->back();
+        return redirect()->route('slider.index');
+        // return redirect()->back();
     }
 
     /**
@@ -92,7 +80,7 @@ class SliderController extends Controller
     public function edit($id)
     {
         $slideredit =  Slider::find($id);
-        return view('backend.slider.edit',compact('slideredit'));
+        return view('backend.slider.edit', compact('slideredit'));
     }
 
     /**
@@ -105,11 +93,20 @@ class SliderController extends Controller
     public function update(Request $request)
     {
         $dataslider =  Slider::find($request->id);
-        // dd($dataslider);
         $dataslider->subheading = $request->subheading;
         $dataslider->heading = $request->heading;
         $dataslider->paragraph = $request->paragraph;
         $dataslider->button_text = $request->button_text;
+
+        if ($request->file('slideimage')) {
+            $imageName = time() . '.' . $request->slideimage->extension();
+            $request->slideimage->move(public_path('/backendsite/images/slider/'), $imageName);
+            $dataslider->slideimage = $imageName;
+        } else {
+            unset($dataslider->slideimage);
+        }
+        
+        // dd($dataslider);
         $dataslider->save();
         return redirect()->route('slider.index');
     }
@@ -122,9 +119,8 @@ class SliderController extends Controller
      */
     public function destroy($id)
     {
-       $deleteslider = Slider::find($id);
-       $deleteslider->delete();
-       return redirect()->route('slider.index');
-
+        $deleteslider = Slider::find($id);
+        $deleteslider->delete();
+        return redirect()->route('slider.index');
     }
 }
