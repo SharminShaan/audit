@@ -13,6 +13,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SubcategoryController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -96,5 +97,13 @@ Route::post('/category/store', [CategoryController::class, 'store'])->name('cate
 Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
 Route::put('/category/update/{id}', [CategoryController::class, 'update'])->name('category.update');
 Route::delete('/category/delete/{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
+
+//subcategory routes
+Route::get('/subcategory/index', [SubcategoryController::class, 'index'])->name('subcategory.index');
+Route::get('/subcategory/create', [SubcategoryController::class, 'create'])->name('subcategory.create');
+Route::post('/subcategory/store', [SubcategoryController::class, 'store'])->name('subcategory.store');
+Route::get('/subcategory/edit/{id}', [SubcategoryController::class, 'edit'])->name('subcategory.edit');
+Route::put('/subcategory/update/{id}', [SubcategoryController::class, 'update'])->name('subcategory.update');
+Route::delete('/subcategory/delete/{id}', [SubcategoryController::class, 'destroy'])->name('subcategory.destroy');
 
 

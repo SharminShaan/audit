@@ -37,3 +37,10 @@
 @media (max-width: 1399.98px) {
 
  }
+
+
+ /* custom- create card page  */
+
+ .card.card-primary {
+    padding: 20px;
+}
