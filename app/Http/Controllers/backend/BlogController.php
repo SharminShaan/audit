@@ -3,43 +3,64 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog_cats;
+use App\Models\Blogs;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
     public function index()
     {
-        $data = Sub_categories::all();
-        return view('backend.subcategory.index', compact('data'));
+        $data = Blogs::all();
+        return view('backend.blog.index', compact('data'));
     }
 
     public function create()
     {
-        $datas = Category::get();
-        return view('backend.subcategory.create', compact('datas'));
+        $datas = Blog_cats::get();
+        return view('backend.blog.create', compact('datas'));
     }
 
     public function store(Request $request)
     {
         $data = [];
-        $data['cat_id'] = $request->cat_id;
-        $data['sub_cat_name'] = $request->sub_cat_name;
+        $data['blog_cat_id'] = $request->blog_cat_id;
+        $data['title'] = $request->title;
+        $data['date'] = date("Y-m-d");
+        $data['short_description'] = $request->short_description;
+        $data['long_description'] = $request->long_description;
+        $data['quotation'] = $request->quotation;
+        $data['tags'] = $request->tags;
+        $user = Auth::user()->name;
+        $data['uploaded_by'] = $user;
+        $data['comment'] = $request->comment;
+
+        // dd($data);
+
 
         // image
-        $rand = rand(10, 100);
-        $imageName = time() . $rand . '.' . $request->image->extension();
-        $request->image->move(public_path('/backendsite/images/'), $imageName);
-        $data['image'] = $imageName;
 
-        Sub_categories::create($data);
-        return redirect()->route('subcategory.index')->with('message', 'Insert Successfully!');
+        if ($request->file('image')) {
+            $rand = rand(10, 100);
+            $imageName = time() . $rand . '.' . $request->image->extension();
+            $request->image->move(public_path('/backendsite/blogimage/'), $imageName);
+            $data['image'] = $imageName;
+        } else {
+            unset($data['image']);
+        }
+
+
+        Blogs::create($data);
+        return redirect()->route('blog.index')->with('message', 'Insert Successfully!');
     }
 
     public function edit($id)
     {
-        $data = Sub_categories::findorfail($id);
-        $catdatas = Category::get();
-        return view('backend.subcategory.edit', compact('data', 'catdatas'));
+        $data = Blogs::findorfail($id);
+        $catdatas = Blog_cats::get();
+        return view('backend.blog.edit', compact('data', 'catdatas'));
     }
 
     /**
@@ -51,30 +72,36 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $input['cat_id'] = $request->input('cat_id');
-        $input['sub_cat_name'] = $request->input('sub_cat_name');
+        $data['blog_cat_id'] = $request->blog_cat_id;
+        $data['title'] = $request->title;
+        $data['date'] = date("Y-m-d");
+        $data['short_description'] = $request->short_description;
+        $data['long_description'] = $request->long_description;
+        $data['quotation'] = $request->quotation;
+        $data['tags'] = $request->tags;
+        $data['uploaded_by'] = $request->uploaded_by;
+        $data['comment'] = $request->comment;
 
         // image
         if ($request->file('image')) {
             $rand = rand(10, 100);
             $imageName = time() . $rand . '.' . $request->image->extension();
             // $imageName = time() . '.' . $request->image->extension();
-            $request->image->move(public_path('/backendsite/images/'), $imageName);
+            $request->image->move(public_path('/backendsite/blogimage/'), $imageName);
             $input['image'] = $imageName;
         } else {
             unset($input['image']);
         }
 
-        DB::table('sub_categories')->where('id', $request->id)->update($input);
+        DB::table('blogs')->where('id', $request->id)->update($input);
 
-        return redirect()->route('subcategory.index')->with('message', 'Updated successfully');
-
+        return redirect()->route('blog.index')->with('message', 'Updated successfully');
     }
 
 
     public function destroy($id)
     {
-        $data = Sub_categories::find($id);
+        $data = Blogs::find($id);
         $data->delete();
         return redirect()->back()->with('message', 'Deleted Successfully!');
     }

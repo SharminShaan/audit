@@ -73,7 +73,7 @@
 
 .news-container .title {
     position: absolute;
-    background: #df2020;
+    background: #0B6777;
     height: 8%;
     display: flex;
     align-items: center;
@@ -83,6 +83,7 @@
     z-index: 200;
     width: 15%;
 }
+
 
 .news-container ul {
     display: flex;

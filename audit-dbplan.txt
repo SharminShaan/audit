@@ -82,7 +82,8 @@ type_id,type_name,name,email,phone,address,others,doc_file,service_type,long_des
 
 crud form:
 page setup crud:
-title, short_description,image,image2,image3,child_cat_id
+
+child_cat_id , title, short_description,image,image2,image3,
 
 
 ===about us==
@@ -92,7 +93,7 @@ title, file(pdf,doc),image, youtube,short_description,long_description,
 
 
 team:
-name, designation, short_description, email,phone, experience, image,
+name, designation, short_description, email,phone, experience, image, facebook, twitter, instagram
 
 affiliation:
 title, long_description,image
@@ -105,10 +106,13 @@ title,long_description,image
 
 ====services===
 
+name,short_description , sub-cat   // 1 crud
+
+
 audit & assurance:
 name,short_description , sub-cat   // 1 crud
 
-taxation & vat:
+ ## taxation & vat:
 name, sub-cat
 
 advisory:
@@ -124,7 +128,7 @@ human resource service:
 name, sub-cat
 
 training & development:
-title, short_description, sub-cat
+title, short_description, sub-cat   ##
 
 ===client====
 sub_cat_id,
@@ -147,7 +151,7 @@ job_title,vacancy,age,education, experience, responsibilities,compensation,
 employment_status, location,date(deadline)
 
 regulators:
-title,long_description,image,logo
+title,long_description,image,logo, link , cat_id
 
 contact us:
 title,address,phone,email,
@@ -155,7 +159,7 @@ title,address,phone,email,
 
 
 blog:
-title,date,uploaded_by,blog_cat_name,comment,long_description,short_description,blockquote,image,tags
+blog_cat_name, title,date,uploaded_by,comment,long_description,short_description,blockquote,image,tags
 
 blog_category
 blog_cat_name

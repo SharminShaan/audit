@@ -3,6 +3,7 @@
 use App\Http\Controllers\backend\BackendHome;
 use App\Http\Controllers\backend\BlogcatController;
 use App\Http\Controllers\backend\BlogController;
+use App\Http\Controllers\backend\ServiceController;
 use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\homepage\WhoweareController;
 use App\Http\Controllers\backend\SliderController;
@@ -118,5 +119,13 @@ Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store')
 Route::get('/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit');
 Route::put('/blog/update/{id}', [BlogController::class, 'update'])->name('blog.update');
 Route::delete('/blog/delete/{id}', [BlogController::class, 'destroy'])->name('blog.destroy');
+
+//  blog routes
+Route::get('/servicecon/index', [ServiceController::class, 'index'])->name('servicecon.index');
+Route::get('/servicecon/create', [ServiceController::class, 'create'])->name('servicecon.create');
+Route::post('/servicecon/store', [ServiceController::class, 'store'])->name('servicecon.store');
+Route::get('/servicecon/edit/{id}', [ServiceController::class, 'edit'])->name('servicecon.edit');
+Route::put('/servicecon/update/{id}', [ServiceController::class, 'update'])->name('servicecon.update');
+Route::delete('/servicecon/delete/{id}', [ServiceController::class, 'destroy'])->name('servicecon.destroy');
 
 

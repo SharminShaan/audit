@@ -261,10 +261,9 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-8 col-8 text-center mt-5 mb-5">
-                    <div class="section-title-two mb-30 tg-heading-subheading animation-style2">
-                        <span class="sub-title tg-element-title">Our Valued Clients</span>
-                        <h2 class="title tg-element-title">Get an insurance quote From Our Expertise</h2>
-
+                    <div class="section-title-two mb-30 tg-heading-subheading animation-style2 text-center">
+                        <span class="sub-title tg-element-title"> Clients</span>
+                        {{-- <h4 class="text-center"> Our Valued Clients </h4> --}}
                     </div>
                 </div>
             </div>
@@ -273,7 +272,7 @@
                     <div class="estimate-content text-center">
 
                         <div class="estimate-tab-wrap">
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            {{-- <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
                                         data-bs-target="#home-tab-pane" type="button" role="tab"
@@ -297,12 +296,12 @@
                                         data-bs-target="#life-tab-pane" type="button" role="tab"
                                         aria-controls="life-tab-pane" aria-selected="false">NGOs</button>
                                 </li>
-                            </ul>
+                            </ul> --}}
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
                                     aria-labelledby="home-tab" tabindex="0">
                                     <div class="estimate-form-wrap">
-                                        <h1>Banks, Financial Institutions</h1>
+                                        {{-- <h1>Banks, Financial Institutions</h1> --}}
                                         <!-- brand-area -->
                                         <div class="brand-aera-five pt-t pb-5">
                                             <div class="container">
@@ -359,11 +358,13 @@
                                             </div>
                                         </div>
                                         <!-- brand-area-end -->
-                                        <a href="banking.html"><button class="btn btn-three text text-center"
-                                                type="submit">See More</button></a>
+                                        {{-- <a href="banking.html"><button class="btn btn-three text text-center"
+                                                type="submit">See More</button>
+                                        </a> --}}
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="vehicles-tab-pane" role="tabpanel"
+
+                                {{-- <div class="tab-pane fade" id="vehicles-tab-pane" role="tabpanel"
                                     aria-labelledby="vehicles-tab" tabindex="0">
                                     <div class="estimate-form-wrap">
                                         <h2>Multinational Companies</h2>
@@ -485,6 +486,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                 --}}
                             </div>
                         </div>
                     </div>
@@ -498,8 +500,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section-title-two text-center white-title mb-40 tg-heading-subheading animation-style3">
-                        <span class="sub-title"> Our Partner</span>
-                        <h2 class="title tg-element-title">Our expert partners will help you.</h2>
+                        <span class="sub-title"> Our Team</span>
+                        <h4 class="title tg-element-title">Expert Team will help you.</h4>
                     </div>
                 </div>
             </div>
@@ -638,13 +640,89 @@
         </div>
     </section>
     <!-- partner-area-end -->
-    <!-- ENLISTMENT -area -->
-    <section>
+
+    <section class="">
+
+        <!-- ENLISTMENT -area -->
+        <div class="brand-aera-two pb-80 mt-5 mb-5">
+            <div class="container">
+                <div class="mx-auto text-center mb-5 " style="max-width: 900px;">
+                    <h3 class="section-title px-3 text-center">ENLISTMENT</h3>
+                    {{-- <h1 class="mb-0">Our Enlistment Members</h1> --}}
+                </div>
+                <div class="row brand-active mt-5 ">
+                    <div class="col-lg-12">
+                        <div class="brand-item">
+                            <a href="https://www.bb.org.bd/en/index.php" target="_blank"> <img
+                                    src="{{ asset('frontend/assets/images/client/enlistment/Picture13.png') }}"
+                                    alt="ENLISTMENT"> </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="brand-item">
+                            <a href="https://sec.gov.bd/" target="_blank"> <img
+                                    src="{{ asset('frontend/assets/images/client/enlistment/Picture14.jpg') }}"
+                                    alt="ENLISTMENT"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="brand-item">
+                            <a href="https://mra.gov.bd/" target="_blank"><img
+                                    src="{{ asset('frontend/assets/images/client/enlistment/Picture15.jpg') }}"
+                                    alt="ENLISTMENT"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="brand-item">
+                            <a href="http://www.ngoab.gov.bd/" target="_blank"><img
+                                    src="{{ asset('frontend/assets//images/client/enlistment/Picture16.png') }}"
+                                    alt="ENLISTMENT"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="brand-item">
+                            <a href="https://pksf.org.bd/" target="_blank"><img
+                                    src="{{ asset('frontend/assets/images/client/enlistment/Picture17.png') }}"
+                                    alt="Regulators"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="brand-item">
+                            <a href="https://www.worldbank.org/en/home" target="_blank"><img
+                                    src="{{ asset('frontend/assets/images/client/enlistment/Picture18.png') }}"
+                                    alt="Regulators"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="brand-item">
+                            <a href="https://www.jica.go.jp/english/" target="_blank"><img
+                                    src="{{ asset('frontend/assets/images/client/enlistment/Picture19.png') }}"
+                                    alt="Regulators"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="brand-item">
+                            <a href="https://www.adb.org/" target="_blank"><img
+                                    src="{{ asset('frontend/assets/images/client/enlistment/Picture20.jpg') }}"
+                                    alt="Regulators"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-6 col-md-6 text-center mt-5">
+                        <a href="enlistment.html"><button class="btn btn-three text " type="submit">See
+                                More</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{-- Member --}}
         <div class="brand-aera-two pb-80 mt-5 mb-5">
             <div class="container">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">ENLISTMENT</h5>
-                    <h1 class="mb-0">Our Enlistment Members</h1>
+                    <h3 class="section-title px-3 text-center">Members</h3>
+                    {{-- <h1 class="mb-0">Our Enlistment Members</h1> --}}
                 </div>
                 <div class="row brand-active mt-5 ">
                     <div class="col-lg-12">
@@ -714,53 +792,136 @@
         </div>
     </section>
     <!-- ENLISTMENT-area-end -->
+
     <!-- cta-area -->
     <section class="cta-area mt-5 mb-5">
         <div class="container">
-            <div class="cta-inner-wrap" data-background="{{ asset('frontend/assets/img/bg/cta_bg.jpg') }}">
+            <div class="" data-background="{{ asset('frontend/assets/img/bg/cta_bg.jpg') }}">
                 <div class="row align-items-center">
-                    <div class="col-lg-9">
-                        <div class="cta-content">
-                            <div class="cta-info-wrap">
-                                <div class="icon">
-                                    <i class="flaticon-phone-call"></i>
-                                </div>
-                                <div class="content">
-                                    <span>Call For More Info</span>
-                                    <a href="tel:0123456789">+88 01790 700 404</a>
-                                </div>
+
+                    <div class="col-lg-6 offset-md-3">
+                        <div class="footer-widget pt-4">
+                            <h4 class="fw-title">Email Subscription</h4>
+                            <div class="footer-newsletter text-center">
+                                <form action="#">
+                                    <input type="email" placeholder="enter your e-mail">
+                                    <button type="submit">Subscribe</button>
+                                </form>
                             </div>
-                            <h2 class="title">Let’s Request a Schedule For Free Consultation</h2>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+
+                    {{-- <div class="col-lg-3">
                         <div class="cta-btn text-end">
                             <a href="contact.html" class="btn">Contact Us</a>
                         </div>
-                    </div>
+                    </div> --}}
+
                 </div>
             </div>
         </div>
     </section>
+
+
     <!-- blog-area -->
-    <section class="blog-area-four pt-120 pb-90">
+
+    <section class="blog-area-four ">
         <div class="container">
+
+
+
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section-title-two text-center mb-60 tg-heading-subheading animation-style2">
                         <span class="sub-title tg-element-title">News & Blogs</span>
                         <h2 class="title tg-element-title">Read Our Latest Updates</h2>
-                        <p>Learn something more from our blog</p>
+                        {{-- <p>Learn something more from our blog</p> --}}
                     </div>
                 </div>
             </div>
+
             <div class="row justify-content-center">
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <div class="blog-post-item-two">
+                            <div class="blog-post-thumb-two">
+                                <a href="blog-details.html"><img src="{{ asset('frontend/assets/images/blog/1.jpg') }}"
+                                        alt=""></a>
+                                <a href="blog.html" class="tag">Development</a>
+                            </div>
+                            <div class="blog-post-content-two">
+                                <h2 class="title"><a href="blog-details.html">Meet AutoManage, the best AI management
+                                        tools</a></h2>
+                                <p>Everything you need to start building area atching presence for your business.</p>
+                                <div class="blog-meta">
+                                    <ul class="list-wrap">
+
+                                        <li><i class="far fa-calendar"></i>22 Jan, 2023</li>
+
+                                        <a href="blog.html" class="link-btn">Read More <i
+                                                class="flaticon-right-arrow"></i></a>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <div class="blog-post-item-two">
+                            <div class="blog-post-thumb-two">
+                                <a href="blog-details.html"><img src="{{ asset('frontend/assets/images/blog/2.jpg') }}"
+                                        alt=""></a>
+                                <a href="blog.html" class="tag">Business</a>
+                            </div>
+                            <div class="blog-post-content-two">
+                                <h2 class="title"><a href="blog-details.html">Meet AutoManage, the best AI management
+                                        tools</a></h2>
+                                <p>Everything you need to start building area atching presence for your business.</p>
+                                <div class="blog-meta">
+                                    <ul class="list-wrap">
+
+                                        <li><i class="far fa-calendar"></i>22 Jan, 2023</li>
+
+                                        <a href="blog.html" class="link-btn">Read More <i
+                                                class="flaticon-right-arrow"></i></a>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <div class="blog-post-item-two">
+                            <div class="blog-post-thumb-two">
+                                <a href="blog-details.html"><img src="{{ asset('frontend/assets/images/blog/3.jpg') }}"
+                                        alt=""></a>
+                                <a href="blog.html" class="tag">Tax Advisory</a>
+                            </div>
+                            <div class="blog-post-content-two">
+                                <h2 class="title"><a href="blog-details.html">Meet AutoManage, the best AI management
+                                        tools</a></h2>
+                                <p>Everything you need to start building area atching presence for your business.</p>
+                                <div class="blog-meta">
+                                    <ul class="list-wrap">
+
+                                        <li><i class="far fa-calendar"></i>22 Jan, 2023</li>
+
+                                        <a href="blog.html" class="link-btn">Read More <i
+                                                class="flaticon-right-arrow"></i></a>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-xl-4 col-lg-4 col-md-4 ">
                     <div class="blog-post-item-four">
                         <div class="blog-post-thumb-four">
                             <!-- image must be 392/260  -->
-                            <a href="blog.html"><img
-                                    src="{{ asset('frontend/assets/images/newsletter events/blog1.png') }}"
+                            <a href="blog.html"><img src="{{ asset('frontend/assets/images/blog/1.jpg') }}"
                                     alt="IAK Blog"></a>
                         </div>
                         <div class="blog-post-content-four">
@@ -771,9 +932,9 @@
                                     <li><i class="far fa-user"></i>by <a href="blog.html">Admin</a></li>
                                 </ul>
                             </div>
-                            <h4 class="title"><a href="blog.html">BSEC has issued a circular dated January 24, 2024,
-                                    regarding the deadline for audit of the annual financial statements of companies ...</a>
-                            </h4>
+                            <h5> <a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+                                    explicabo! </a></h5>
+
                             <a href="blog.html" class="link-btn">Read More <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
@@ -782,7 +943,7 @@
                     <div class="blog-post-item-four">
                         <div class="blog-post-thumb-four">
                             <a href="blog.html"><img
-                                    src="{{ asset('frontend/assets/images/newsletter events/blog2.png') }}"
+                                    src="{{ asset('frontend/assets/images/newsletter events/blog1.png') }}"
                                     alt="IAK Blog"></a>
                         </div>
                         <div class="blog-post-content-four">
@@ -793,8 +954,13 @@
                                     <li><i class="far fa-user"></i>by <a href="blog.html">Admin</a></li>
                                 </ul>
                             </div>
-                            <h4 class="title"><a href="blog.html">Islam Aftab Kamrul & Co., Chartered Accountants has
-                                    been enlisted by the NGO Affairs Bureau for the year 2024 and 2025.</a></h4>
+
+                            {{-- <h5 class="title"><a href="blog.html">Employment opportunity at Islam Aftab Kamrul & Co.,
+                                Chartered Accountants, Chittagong branch.</a></h5> --}}
+
+                            <h5> <a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+                                    explicabo! </a></h5>
+
                             <a href="blog.html" class="link-btn">Read More <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
@@ -814,14 +980,20 @@
                                     <li><i class="far fa-user"></i>by <a href="blog.html">Admin</a></li>
                                 </ul>
                             </div>
-                            <h4 class="title"><a href="blog.html">Employment opportunity at Islam Aftab Kamrul & Co.,
-                                    Chartered Accountants, Chittagong branch.</a></h4>
+                            <h5> <a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+                                    explicabo! </a></h5>
+
+
                             <a href="blog.html" class="link-btn">Read More <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
     </section>
+
+
     <!-- blog-area-end -->
 @endsection

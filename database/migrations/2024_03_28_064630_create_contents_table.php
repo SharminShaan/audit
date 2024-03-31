@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('contents', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('category_id')->nullable();
             $table->unsignedBigInteger('subcats_id')->nullable();
             $table->unsignedBigInteger('childcat_id')->nullable();
             $table->string('type')->nullable();

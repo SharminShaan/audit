@@ -29,10 +29,19 @@ class SubcategoryController extends Controller
         $data['sub_cat_name'] = $request->sub_cat_name;
 
         // image
-        $rand = rand(10, 100);
-        $imageName = time() . $rand . '.' . $request->image->extension();
-        $request->image->move(public_path('/backendsite/images/'), $imageName);
-        $data['image'] = $imageName;
+        // $rand = rand(10, 100);
+        // $imageName = time() . $rand . '.' . $request->image->extension();
+        // $request->image->move(public_path('/backendsite/images/'), $imageName);
+        // $data['image'] = $imageName;
+
+        if ($request->file('image')) {
+            $rand = rand(10, 100);
+            $imageName = time() . $rand . '.' . $request->image->extension();
+            $request->image->move(public_path('/backendsite/images/'), $imageName);
+            $data['image'] = $imageName;
+        } else {
+            unset($data['image']);
+        }
 
         Sub_categories::create($data);
         return redirect()->route('subcategory.index')->with('message', 'Insert Successfully!');
