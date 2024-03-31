@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\backend\BackendHome;
+use App\Http\Controllers\backend\BlogcatController;
+use App\Http\Controllers\backend\BlogController;
 use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\homepage\WhoweareController;
 use App\Http\Controllers\backend\SliderController;
@@ -12,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubcategoryController;
 use Illuminate\Support\Facades\Auth;
 
@@ -85,7 +86,7 @@ Route::get('/blog', [FrontendController::class, 'blog']);
   Route::post('/whoweare/update', [WhoweareController::class, 'update'])->name('whoweare.update');
 
 
-// category
+// category routes
 Route::get('/category/index', [CategoryController::class, 'index'])->name('category.index');
 Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
 Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
@@ -100,5 +101,22 @@ Route::post('/subcategory/store', [SubcategoryController::class, 'store'])->name
 Route::get('/subcategory/edit/{id}', [SubcategoryController::class, 'edit'])->name('subcategory.edit');
 Route::put('/subcategory/update/{id}', [SubcategoryController::class, 'update'])->name('subcategory.update');
 Route::delete('/subcategory/delete/{id}', [SubcategoryController::class, 'destroy'])->name('subcategory.destroy');
+
+
+//  blog category routes
+Route::get('/blogcat/index', [BlogcatController::class, 'index'])->name('blogcat.index');
+Route::get('/blogcat/create', [BlogcatController::class, 'create'])->name('blogcat.create');
+Route::post('/blogcat/store', [BlogcatController::class, 'store'])->name('blogcat.store');
+Route::get('/blogcat/edit/{id}', [BlogcatController::class, 'edit'])->name('blogcat.edit');
+Route::put('/blogcat/update/{id}', [BlogcatController::class, 'update'])->name('blogcat.update');
+Route::delete('/blogcat/delete/{id}', [BlogcatController::class, 'destroy'])->name('blogcat.destroy');
+
+//  blog routes
+Route::get('/blog/index', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create');
+Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store');
+Route::get('/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit');
+Route::put('/blog/update/{id}', [BlogController::class, 'update'])->name('blog.update');
+Route::delete('/blog/delete/{id}', [BlogController::class, 'destroy'])->name('blog.destroy');
 
 

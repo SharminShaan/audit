@@ -70,6 +70,31 @@
 
                 <li class="nav-item">
                     <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Blog
+                            <i class="fas fa-angle-right right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('blogcat.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Blog Category</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('blog.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Blog-List</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
                         <p> Home Page <i class="fas fa-angle-left right"></i> </p>
                     </a>

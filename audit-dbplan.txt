@@ -106,25 +106,25 @@ title,long_description,image
 ====services===
 
 audit & assurance:
-name,short_description
+name,short_description , sub-cat   // 1 crud
 
 taxation & vat:
-name
+name, sub-cat
 
 advisory:
-name
+name, sub-cat
 
 secretarial:
-name
+name, sub-cat
 
 business service:
-name
+name, sub-cat
 
 human resource service:
-name
+name, sub-cat
 
 training & development:
-title, short_description
+title, short_description, sub-cat
 
 ===client====
 sub_cat_id,

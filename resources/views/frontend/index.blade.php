@@ -96,37 +96,39 @@
     <!-- about-area -->
     <section class="about-area-three">
         <div class="container">
+
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-6 col-md-9">
                     <div class="about-img-wrap-three">
                         <!-- image must be 439 * 508 -->
-                        <img src="{{ asset('/backendsite/images/homepage/'.$Whoweare->image1) }}" alt="CompanyExperience">
+                        <img src="{{ asset('/backendsite/images/homepage/' . $Whoweare->image1) }}" alt="CompanyExperience">
                         <!-- image must be 247*247 -->
-                        <img src="{{ asset('/backendsite/images/homepage/'.$Whoweare->image2) }}" alt="CompanyExperience">
+                        <img src="{{ asset('/backendsite/images/homepage/' . $Whoweare->image2) }}" alt="CompanyExperience">
                         <div class="experience-wrap" data-aos="fade-up" data-aos-delay="300">
-                            <h2 class="title">{{$Whoweare->years}} <span>Years</span></h2>
-                            <p>{{$Whoweare->yearsparagraph}}</p>
+                            <h2 class="title">{{ $Whoweare->years }} <span>Years</span></h2>
+                            <p>{{ $Whoweare->yearsparagraph }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-content-three">
                         <div class="section-title-two mb-20 tg-heading-subheading animation-style3">
-                            <span class="sub-title" data-aos="fade-down" data-aos-delay="100"> {{$Whoweare->heading}} </span>
-                            <h2 class="title tg-element-title">{{$Whoweare->subheading}}</h2>
+                            <span class="sub-title" data-aos="fade-down" data-aos-delay="100"> {{ $Whoweare->heading }}
+                            </span>
+                            <h2 class="title tg-element-title">{{ $Whoweare->subheading }}</h2>
                         </div>
-                        <p class="info-one">{{$Whoweare->paragraph}}.</p>
+                        <p class="info-one">{{ $Whoweare->paragraph }}.</p>
                         <div class="about-list-two">
                             <ul class="list-wrap ">
                                 <li><i class="fas fa-arrow-right"></i>
-                                    {{$Whoweare->list1}}</li>
+                                    {{ $Whoweare->list1 }}</li>
                                 <li><i class="fas fa-arrow-right"></i>
-                                    {{$Whoweare->list2}} </li>
-                                <li><i class="fas fa-arrow-right"></i>{{$Whoweare->list3}}</li>
-                                <li><i class="fas fa-arrow-right"></i>{{$Whoweare->list4}}</li>
+                                    {{ $Whoweare->list2 }} </li>
+                                <li><i class="fas fa-arrow-right"></i>{{ $Whoweare->list3 }}</li>
+                                <li><i class="fas fa-arrow-right"></i>{{ $Whoweare->list4 }}</li>
                             </ul>
                         </div>
-                        <p class="" data-aos="fade-up" data-aos-delay="100">{{$Whoweare->bottomparagraph}}.</p>
+                        <p class="" data-aos="fade-up" data-aos-delay="100">{{ $Whoweare->bottomparagraph }}.</p>
 
                     </div>
                 </div>
