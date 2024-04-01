@@ -283,7 +283,7 @@ label {
 	margin-left: 45px;
 }
 .btn::before {
-	content: "";
+	/* content: ""; */
 	position: absolute;
 	right: 0;
 	top: 50%;
@@ -6951,7 +6951,7 @@ header{
 .pricing-list .list-wrap li {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start !important;
 	color: var(--tg-paragraph-color);
 	margin-bottom: 15px;
 }

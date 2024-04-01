@@ -245,7 +245,7 @@
                             Chartered Accountants</p>
                     </div>
                     <div class="image360 border-5 bg-dark">
-                        <iframe {{-- src="https://www.google.com/maps/embed?pb=!4v1711810204116!6m8!1m7!1sKNKK2kfl_ylrGpJn6ZQfrg!2m2!1d23.81570737101514!2d90.36574214053945!3f138.10231688115218!4f7.535186929483956!5f0.7820865974627469" --}} src="{{ $seeting->vmap }}" width="100%" height="600"
+                        <iframe {{-- src="https://www.google.com/maps/embed?pb=!4v1711810204116!6m8!1m7!1sKNKK2kfl_ylrGpJn6ZQfrg!2m2!1d23.81570737101514!2d90.36574214053945!3f138.10231688115218!4f7.535186929483956!5f0.7820865974627469" --}} src="{{ $setting->vmap }}" width="100%" height="600"
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
 
@@ -943,7 +943,7 @@
                     <div class="blog-post-item-four">
                         <div class="blog-post-thumb-four">
                             <a href="blog.html"><img
-                                    src="{{ asset('frontend/assets/images/newsletter events/blog1.png') }}"
+                                    src="{{ asset('frontend/assets/images/newsletter-events/blog1.png') }}"
                                     alt="IAK Blog"></a>
                         </div>
                         <div class="blog-post-content-four">
@@ -969,7 +969,7 @@
                     <div class="blog-post-item-four">
                         <div class="blog-post-thumb-four">
                             <a href="blog.html"><img
-                                    src="{{ asset('frontend/assets/images/newsletter events/blog.png') }}"
+                                    src="{{ asset('frontend/assets/images/newsletter-events/blog.png') }}"
                                     alt="IAK Blog"></a>
                         </div>
                         <div class="blog-post-content-four">

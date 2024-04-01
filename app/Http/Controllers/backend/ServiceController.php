@@ -53,6 +53,7 @@ class ServiceController extends Controller
         unset($data['category_id']);
 
 
+
         DB::table('contents')->where('id', $request->id)->update($data);
 
         return redirect()->route('servicecon.index')->with('message', 'Updated successfully');

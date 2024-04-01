@@ -35,7 +35,7 @@
                                 <div class="form-group">
                                     <label for="sitename">Site Name</label>
                                     <input type="text" class="form-control" id="sitename" name="sitename"
-                                        value="{{ $seeting->sitename }}">
+                                        value="{{ $setting->sitename }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputFile">Logo</label>
@@ -56,59 +56,59 @@
                                 <div class="form-group">
                                     <label for="email">Email address</label>
                                     <input type="email" class="form-control" id="email" name="email"
-                                        value="{{ $seeting->email }}">
+                                        value="{{ $setting->email }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Phone Number</label>
                                     <input type="text" class="form-control" id="phone" name="phone"
-                                        value="{{ $seeting->phone }}">
+                                        value="{{ $setting->phone }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="address">Address</label>
                                     <input type="text" class="form-control" id="address" name="address"
-                                        value="{{ $seeting->address }}">
+                                        value="{{ $setting->address }}">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="paragraph">Footer Paragraph</label>
                                     <input type="text" class="form-control" id="paragraph" name="paragraph"
-                                        value="{{ $seeting->paragraph }}">
+                                        value="{{ $setting->paragraph }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="opening">Opening Hour</label>
                                     <input type="text" class="form-control" id="opening" name="opening"
-                                        value="{{ $seeting->opening }}">
+                                        value="{{ $setting->opening }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="facebook">Facebook</label>
                                     <input type="text" class="form-control" id="facebook" name="facebook"
-                                        value="{{ $seeting->facebook }}">
+                                        value="{{ $setting->facebook }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="linkedin">Linkedin</label>
                                     <input type="text" class="form-control" id="linkedin" name="linkedin"
-                                        value="{{ $seeting->linkedin }}">
+                                        value="{{ $setting->linkedin }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="twitter">Twitter</label>
                                     <input type="text" class="form-control" id="twitter" name="twitter"
-                                        value="{{ $seeting->twitter }}">
+                                        value="{{ $setting->twitter }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="googleplus">Google Plus</label>
                                     <input type="text" class="form-control" id="googleplus" name="googleplus"
-                                        value="{{ $seeting->googleplus }}">
+                                        value="{{ $setting->googleplus }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="youtube">Youtube</label>
                                     <input type="text" class="form-control" id="youtube" name="youtube"
-                                        value="{{ $seeting->youtube }}">
+                                        value="{{ $setting->youtube }}">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="youtube">Virtual Map</label>
                                     <input type="text" class="form-control" id="vmap" name="vmap"
-                                        value=" @if ($seeting->vmap) {{ $seeting->vmap }} @endif ">
+                                        value=" @if ($setting->vmap) {{ $setting->vmap }} @endif ">
                                 </div>
 
                             </div>

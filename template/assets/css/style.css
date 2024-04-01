@@ -6991,6 +6991,14 @@ header{
 	color: var(--tg-paragraph-color);
 	margin-bottom: 15px;
 }
+
+.pricing-list .list-wrap li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--tg-paragraph-color);
+    margin-bottom: 15px;
+}
 .pricing-list .list-wrap li:last-child {
 	margin-bottom: 0;
 }

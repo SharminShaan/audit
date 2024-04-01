@@ -39,7 +39,7 @@
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10">
                             <div class="services-item-three">
                                 <div class="services-thumb-three membership">
-                                    <a href="services-details.html"><img src="{{ asset('frontend/assets/images/newsletter events/icab.jpg')}}" class="img-fluid" alt="ICAB"></a>
+                                    <a href="services-details.html"><img src="{{ asset('frontend/assets/images/newsletter-events/icab.jpg')}}" class="img-fluid" alt="ICAB"></a>
                                 </div>
                             </div>
                         </div>

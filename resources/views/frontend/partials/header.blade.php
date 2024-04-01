@@ -69,14 +69,14 @@
                              <li><i class="flaticon-mail"></i><a
                                      href="mailto:
                                         info@audit.com.bd ">
-                                     {{ $seeting->email }} </a></li>
+                                     {{ $setting->email }} </a></li>
                              <li class="header-contact-two">
                                  <div class="icon">
                                      <i class="flaticon-phone-call text-white"></i>
                                  </div>
                                  <div class="content text-white">
                                      <a href="tel:+8801790700404"> <span class="text-white">Hot Line:
-                                             {{ $seeting->phone }}</span> </a>
+                                             {{ $setting->phone }}</span> </a>
 
                                  </div>
                              </li>
@@ -87,10 +87,10 @@
                      <div class="header-top-right">
                          <div class="header-social">
                              <ul class="list-wrap">
-                                 <li><a href="{{ $seeting->facebook }} "><i class="fab fa-facebook-f"></i></a></li>
-                                 <li><a href="{{ $seeting->twitter }}"><i class="fab fa-twitter"></i></a></li>
-                                 <li><a href="{{ $seeting->linkedin }}"><i class="fab fa-linkedin-in"></i></a></li>
-                                 <li><a href="{{ $seeting->googleplus }}"><i class="fa-brands fa-google-plus-g"></i></a>
+                                 <li><a href="{{ $setting->facebook }} "><i class="fab fa-facebook-f"></i></a></li>
+                                 <li><a href="{{ $setting->twitter }}"><i class="fab fa-twitter"></i></a></li>
+                                 <li><a href="{{ $setting->linkedin }}"><i class="fab fa-linkedin-in"></i></a></li>
+                                 <li><a href="{{ $setting->googleplus }}"><i class="fa-brands fa-google-plus-g"></i></a>
                                  </li>
 
                              </ul>
@@ -110,7 +110,7 @@
                          <nav class="menu-nav">
                              <div class="logo">
                                  <a href="{{ url('/') }}"><img
-                                         src="{{ asset('backendsite/images/' . $seeting->logo) }}" alt="Logo"></a>
+                                         src="{{ asset('backendsite/images/' . $setting->logo) }}" alt="Logo"></a>
                              </div>
                              <div class="navbar-wrap main-menu d-none d-lg-flex">
                                  <ul class="navigation">
@@ -175,19 +175,23 @@
                                                      <li class="active"><a
                                                              href="{{ url('financial-institutions') }}">Financial
                                                              Institutions</a></li>
-                                                     <li><a href="{{ url('listed-companies') }}">Listed Companies</a>
+                                                     <li><a href="{{ url('listed-companies') }}"> Govt./Semi-Govt.
+                                                         </a>
                                                      </li>
-                                                     <li><a href="{{ url('international-clients') }}">International
-                                                             Clients</a></li>
-                                                     <li><a href="{{ url('japanese-client') }}">Japanese Clients</a>
+                                                     <li><a href="{{ url('foreign-client') }}">Foreign Clients</a>
                                                      </li>
+                                                     {{-- <li><a href="{{ url('international-clients') }}">International
+                                                             Clients</a>
+                                                     </li> --}}
                                                  </ul>
                                              </li>
                                              <ul class="mega-sub-menu">
-                                                 <h3> Our Valued ClientS </h3>
+                                                 <h3> Our Valued Client </h3>
                                                  <li>
                                              </ul>
                                          </ul>
+
+
 
                                      </li>
                                      <li class="menu-item-has-children"><a href="#">Media</a>
@@ -196,10 +200,10 @@
                                                  <ul class="mega-sub-menu">
                                                      <li class="active"><a
                                                              href="{{ url('newsletter') }}">Newsletter</a></li>
-                                                     <li><a href="{{ url('blog') }}">Blog</a></li>
-                                                     <li><a href="publication.html">Publications</a></li>
-                                                     <li><a href="gallery.html">Gallery</a></li>
-                                                     <li><a href="event.html">Events</a></li>
+                                                     <li><a href="{{ url('blogs') }}">Blog</a></li>
+                                                     <li><a href="{{ url('publication') }}">Publications</a></li>
+                                                     <li><a href="{{ url('gallery') }}">Gallery</a></li>
+                                                     <li><a href="{{ url('events') }}">Events</a></li>
                                                  </ul>
                                              </li>
                                              <li>
@@ -214,17 +218,17 @@
                                          <ul class="sub-menu ">
                                              <li>
                                                  <ul class="mega-sub-menu">
-                                                     <li class="active"><a href="professional.html">Professional</a>
+                                                     <li class="active"><a href="{{ url('professional') }}">Professional</a>
                                                      </li>
-                                                     <li class=""><a href="articleship.html">Articleship</a>
+                                                     <li class=""><a href="{{ url('articleship') }}">Articleship</a>
                                                      </li>
                                                  </ul>
                                              </li>
                                          </ul>
                                      </li>
                                      </li>
-                                     <li><a href="regulators.html">Regulators</a></li>
-                                     <li><a href="contact.html">Contact Us</a></li>
+                                     <li><a href="{{ url('regulators') }}">Regulators</a></li>
+                                     <li><a href="{{ url('contact') }}">Contact Us</a></li>
                                      &nbsp;
                                      <li class="header-search"><a href="#"><i class="flaticon-search"></i></a>
                                      </li>
@@ -283,6 +287,13 @@
                                  <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
                              </div>
                              <div class="social-links">
+
+                                 <ul class="clearfix">
+                                     <a class="" href="{{ url('/') }}"><i class="fa fa-calculator"aria-hidden="true"></i> &nbsp; Tax Calculator
+                                     </a>
+
+                                 </ul>
+
                                  <ul class="clearfix list-wrap">
                                      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                      <li><a href="#"><i class="fab fa-twitter"></i></a></li>

@@ -80,28 +80,28 @@ child_cat_id , title, short_description,image,image2,image3,
 ===about us==
 
 2. Company profile:
-title, file(pdf,doc),image, youtube,short_description,long_description,
+cat_id, sub_cat_id, title, file(pdf,doc),image, youtube,short_description,long_description,
 
 
 3. team:
-name, designation, short_description, email,phone, experience, image, facebook, twitter, instagram
+cat_id, sub_cat_id,name, designation, specialization,short_description, email,phone, experience, image, facebook, twitter, instagram
 
 4. affiliation:
-title, long_description,image
+cat_id, sub_cat_id, title, long_description,image, link //(done)
 
 5. enlistment:
-title, name, logo, link
+cat_id, sub_cat_id, title, name, logo, link
 
 6. membership:
-title,long_description,image, logo
+cat_id, sub_cat_id, title,long_description,image, logo, link
 
 ====services===
 
-7. name,short_description , cat_id, sub_cat_id   // 1 crud  (Done)
+7. name,short_description , cat_id, sub_cat_id   // 1 crud  (Done)  [ logo, link]
 
 
 ===client====
-8. cat_id, sub_cat_id, name, logo, image,
+8. cat_id, sub_cat_id, name, logo, image, // (done)
 
 9. newsletter/e-bulletin,new sticker:
 title, subtitle,long_description, image,doc_upload(pdf,doc)
@@ -120,7 +120,7 @@ job_title,vacancy,age,education, experience, responsibilities,compensation,
 employment_status, location,date(deadline)
 
 14. regulators:
-title,long_description,image,logo, link , cat_id
+cat_id, title,long_description,image,logo, link ,
 
 15. contact us:
 title,address,phone,email,

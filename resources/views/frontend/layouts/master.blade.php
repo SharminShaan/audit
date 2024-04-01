@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ $seeting->sitename }}</title>
+    <title>@yield('title')- {{ $setting->sitename }}</title>
+    {{-- <title>IAK</title> --}}
     <meta name="description" content="ISLAM AFTAB KAMRUL CO. Chartered Accountants">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/images/logo.png') }}">
@@ -31,7 +32,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-    
+
 </head>
 
 <body>

@@ -15,8 +15,8 @@ class ThemeOptionsController extends Controller
      */
     public function index()
     {
-        $seeting = ThemeOptions::where('id', '=', 1)->first();
-        return view('backend.themeoptions.index',compact('seeting'));
+        $setting = ThemeOptions::where('id', '=', 1)->first();
+        return view('backend.themeoptions.index',compact('setting'));
     }
 
     /**
@@ -71,31 +71,31 @@ class ThemeOptionsController extends Controller
      */
     public function update(Request $request)
     {
-        $seeting = ThemeOptions::findOrFail(1);
-        $seeting->sitename = $request->sitename;
-        $seeting->email = $request->email;
-        $seeting->phone = $request->phone;
-        $seeting->address = $request->address;
-        $seeting->paragraph = $request->paragraph;
-        $seeting->opening = $request->opening;
-        $seeting->facebook = $request->facebook;
-        $seeting->linkedin = $request->linkedin;
-        $seeting->twitter = $request->twitter;
-        $seeting->googleplus = $request->googleplus;
-        $seeting->youtube = $request->youtube;
-        $seeting->vmap = $request->vmap;
+        $setting = ThemeOptions::findOrFail(1);
+        $setting->sitename = $request->sitename;
+        $setting->email = $request->email;
+        $setting->phone = $request->phone;
+        $setting->address = $request->address;
+        $setting->paragraph = $request->paragraph;
+        $setting->opening = $request->opening;
+        $setting->facebook = $request->facebook;
+        $setting->linkedin = $request->linkedin;
+        $setting->twitter = $request->twitter;
+        $setting->googleplus = $request->googleplus;
+        $setting->youtube = $request->youtube;
+        $setting->vmap = $request->vmap;
 
 
         if ($request->file('logo')) {
             $imageName = time() . '.' . $request->logo->extension();
             $request->logo->move(public_path('/backendsite/images/'), $imageName);
-            $seeting->logo = $imageName;
+            $setting->logo = $imageName;
         } else {
-            unset($seeting->logo);
+            unset($setting->logo);
         }
 
 
-        $seeting->save();
+        $setting->save();
         return redirect()->back();
     }
 

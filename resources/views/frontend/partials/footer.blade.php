@@ -7,7 +7,7 @@
                      <div class="col-lg-4 col-md-7">
                          <div class="footer-widget">
                              <div class="fw-logo">
-                                 <a href="index.html"><img src="{{ asset('backendsite/images/' . $seeting->logo) }}"
+                                 <a href="index.html"><img src="{{ asset('backendsite/images/' . $setting->logo) }}"
                                          alt="ISLAM AFTAB KAMRUL logo"></a>
                              </div>
                              <div class="footer-content">
@@ -18,7 +18,7 @@
                                                  <i class="fa-solid fa-location-dot"></i>
                                              </div>
                                              <div class="content">
-                                                 <a href="#">{{ $seeting->address }}</a>
+                                                 <a href="#">{{ $setting->address }}</a>
                                              </div>
                                          </li>
                                          <li>
@@ -26,7 +26,7 @@
                                                  <i class="flaticon-clock"></i>
                                              </div>
                                              <div class="content">
-                                                 <p>{{ $seeting->opening }}</p>
+                                                 <p>{{ $setting->opening }}</p>
                                              </div>
                                          </li>
 
@@ -35,7 +35,7 @@
                                                  {{-- <i class="flaticon-note"></i> --}}
                                              </div>
                                              <div class="content">
-                                                <p>{{ $seeting->paragraph }}</p>
+                                                <p>{{ $setting->paragraph }}</p>
                                              </div>
                                          </li>
                                      </ul>
@@ -80,14 +80,14 @@
                                  </form>
                                  <div class="footer-social footer-social-two">
                                      <ul class="list-wrap">
-                                         <li><a href="{{ $seeting->facebook }} "><i class="fab fa-facebook-f"></i></a>
+                                         <li><a href="{{ $setting->facebook }} "><i class="fab fa-facebook-f"></i></a>
                                          </li>
-                                         <li><a href="{{ $seeting->twitter }}"><i class="fab fa-twitter"></i></a></li>
-                                         <li><a href="{{ $seeting->linkedin }}"><i class="fab fa-linkedin-in"></i></a>
+                                         <li><a href="{{ $setting->twitter }}"><i class="fab fa-twitter"></i></a></li>
+                                         <li><a href="{{ $setting->linkedin }}"><i class="fab fa-linkedin-in"></i></a>
                                          </li>
-                                         <li><a href="{{ $seeting->googleplus }}"><i
+                                         <li><a href="{{ $setting->googleplus }}"><i
                                                      class="fa-brands fa-google-plus-g"></i></a></li>
-                                         <li><a href=" {{ $seeting->youtube }}"><i class="fab fa-youtube"></i></a></li>
+                                         <li><a href=" {{ $setting->youtube }}"><i class="fab fa-youtube"></i></a></li>
                                      </ul>
                                  </div>
                              </div>

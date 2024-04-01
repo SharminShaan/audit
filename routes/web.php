@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\backend\AffiliationController;
 use App\Http\Controllers\backend\BackendHome;
 use App\Http\Controllers\backend\BlogcatController;
 use App\Http\Controllers\backend\BlogController;
 use App\Http\Controllers\backend\ServiceController;
+use App\Http\Controllers\backend\ClientController;
 use App\Http\Controllers\backend\CategoryController;
+use App\Http\Controllers\backend\ProfileController;
 use App\Http\Controllers\backend\homepage\WhoweareController;
 use App\Http\Controllers\backend\SliderController;
 use App\Http\Controllers\backend\ThemeOptionsController;
@@ -32,22 +35,19 @@ use Illuminate\Support\Facades\Auth;
 
 
 Auth::routes();
+
+
+/*********************** frontend design route *************************************/
+
 Route::get('/', [HomeController::class, 'index'])->name('frontend.index');
 
-Route::get('/home', [BackendHome::class, 'index'])->name('backend.index');
-
-Route::group(['middleware' => ['auth']], function() {
-    Route::resource('roles', RoleController::class);
-    Route::resource('users', UserController::class);
-});
-
-/*********************** frontend design route *******************
-  ****************************************************************/
+// about us
 Route::get('/company-profile', [FrontendController::class, 'companyprofile']);
 Route::get('/meet-our-team', [FrontendController::class, 'meetourteam']);
 Route::get('/affiliation', [FrontendController::class, 'affiliation']);
 Route::get('/enlistment', [FrontendController::class, 'enlistment']);
 Route::get('/membership', [FrontendController::class, 'membership']);
+// service
 Route::get('/audit-assurance', [FrontendController::class, 'auditassurance']);
 Route::get('/taxation-vat', [FrontendController::class, 'taxationvat']);
 Route::get('/advisory', [FrontendController::class, 'advisory']);
@@ -57,34 +57,49 @@ Route::get('/human-resource-services', [FrontendController::class, 'humanresourc
 Route::get('/training-development', [FrontendController::class, 'trainingdevelopment']);
 // client page start
 Route::get('/financial-institutions', [FrontendController::class, 'financialinstitutions']);
-Route::get('/listed-companies', [FrontendController::class, 'listedcompanies']);
+Route::get('/listed-companies', [FrontendController::class, 'govtSemiGovtlistedcompanies']);
+Route::get('/foreign-client', [FrontendController::class, 'Foreignclient']);
 Route::get('/international-clients', [FrontendController::class, 'internationalclients']);
-Route::get('/japanese-client', [FrontendController::class, 'japaneseclient']);
+
 // media page start
 Route::get('/newsletter', [FrontendController::class, 'newsletter']);
-Route::get('/blog', [FrontendController::class, 'blog']);
+Route::get('/blogs', [FrontendController::class, 'blog']);
+Route::get('/blog-details/{id}', [FrontendController::class, 'blogDetails'])->name('blog.details');
+Route::get('/publication', [FrontendController::class, 'publication'])->name('publication');
+Route::get('/gallery', [FrontendController::class, 'gallery']);
+Route::get('/events', [FrontendController::class, 'events']);
+Route::get('/professional', [FrontendController::class, 'professional']);
+Route::get('/articleship', [FrontendController::class, 'articleship']);
+Route::get('/regulators', [FrontendController::class, 'regulators']);
+Route::get('/contact', [FrontendController::class, 'contact']);
+
+// {{-- publication gallery events professional articleship regulators contact--}}
 
 
 
-/*********************** backend  route *******************
-  ****************************************************************/
-  Route::get('/themeoptions', [ThemeOptionsController::class, 'index'])->name('themeoptions.index');
-  Route::post('/themeoptions/update', [ThemeOptionsController::class, 'update'])->name('themeoptions.update');
 
-/*********************** sider design route *******************
-  ****************************************************************/
-  Route::get('/slider', [SliderController::class, 'index'])->name('slider.index');
-  Route::get('/slider/create', [SliderController::class, 'create'])->name('slider.create');
-  Route::post('/slider/store', [SliderController::class, 'store'])->name('slider.store');
-  Route::get('/slider/edit/{id}', [SliderController::class, 'edit'])->name('slider.edit');
-  Route::post('/slider/update/{id}', [SliderController::class, 'update'])->name('slider.update');
-  Route::get('/slider/delete/{id}', [SliderController::class, 'destroy'])->name('slider.delete');
+/*********************** backend  route *********************************************************/
+
+Route::get('/home', [BackendHome::class, 'index'])->name('backend.index');
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('roles', RoleController::class);
+    Route::resource('users', UserController::class);
+});
+Route::get('/themeoptions', [ThemeOptionsController::class, 'index'])->name('themeoptions.index');
+Route::post('/themeoptions/update', [ThemeOptionsController::class, 'update'])->name('themeoptions.update');
+
+// Sider design route
+Route::get('/slider', [SliderController::class, 'index'])->name('slider.index');
+Route::get('/slider/create', [SliderController::class, 'create'])->name('slider.create');
+Route::post('/slider/store', [SliderController::class, 'store'])->name('slider.store');
+Route::get('/slider/edit/{id}', [SliderController::class, 'edit'])->name('slider.edit');
+Route::post('/slider/update/{id}', [SliderController::class, 'update'])->name('slider.update');
+Route::get('/slider/delete/{id}', [SliderController::class, 'destroy'])->name('slider.delete');
 
 
-/*********************** Home Page design route *******************
-  ****************************************************************/
-  Route::get('/whoweare', [WhoweareController::class, 'index'])->name('homepage.whoweare');
-  Route::post('/whoweare/update', [WhoweareController::class, 'update'])->name('whoweare.update');
+// Home Page design route
+Route::get('/whoweare', [WhoweareController::class, 'index'])->name('homepage.whoweare');
+Route::post('/whoweare/update', [WhoweareController::class, 'update'])->name('whoweare.update');
 
 
 // category routes
@@ -128,4 +143,22 @@ Route::get('/servicecon/edit/{id}', [ServiceController::class, 'edit'])->name('s
 Route::put('/servicecon/update/{id}', [ServiceController::class, 'update'])->name('servicecon.update');
 Route::delete('/servicecon/delete/{id}', [ServiceController::class, 'destroy'])->name('servicecon.destroy');
 
+//  client routes
+Route::get('/client/index', [ClientController::class, 'index'])->name('client.index');
+Route::get('/client/create', [ClientController::class, 'create'])->name('client.create');
+Route::post('/client/store', [ClientController::class, 'store'])->name('client.store');
+Route::get('/client/edit/{id}', [ClientController::class, 'edit'])->name('client.edit');
+Route::put('/client/update/{id}', [ClientController::class, 'update'])->name('client.update');
+Route::delete('/client/delete/{id}', [ClientController::class, 'destroy'])->name('client.destroy');
 
+//  affiliation routes
+Route::get('/affiliation/index', [AffiliationController::class, 'index'])->name('affiliation.index');
+Route::get('/affiliation/create', [AffiliationController::class, 'create'])->name('affiliation.create');
+Route::post('/affiliation/store', [AffiliationController::class, 'store'])->name('affiliation.store');
+Route::get('/affiliation/edit/{id}', [AffiliationController::class, 'edit'])->name('affiliation.edit');
+Route::put('/affiliation/update/{id}', [AffiliationController::class, 'update'])->name('affiliation.update');
+Route::delete('/affiliation/delete/{id}', [AffiliationController::class, 'destroy'])->name('affiliation.destroy');
+
+//company profile
+Route::get('/profile', [ProfileController::class, 'index'])->name('about.profile');
+Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');

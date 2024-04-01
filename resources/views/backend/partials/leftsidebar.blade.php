@@ -42,7 +42,7 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
-                            Category
+                            Page Category
                             <i class="fas fa-angle-right right"></i>
                         </p>
                     </a>
@@ -59,39 +59,10 @@
                                 <p>Sub Category</p>
                             </a>
                         </li>
-                        {{-- <li class="nav-item">
-                    <a href="{{ route('childcategory.index') }}" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Child Category</p>
-                    </a>
-                </li> --}}
+
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Blog
-                            <i class="fas fa-angle-right right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('blogcat.index') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Blog Category</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ route('blog.index') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Blog-List</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
 
                 <li class="nav-item">
                     <a href="#" class="nav-link">
@@ -136,7 +107,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/examples/e-commerce.html" class="nav-link">
+                            <a href="{{ route('affiliation.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Affiliation</p>
                             </a>
@@ -159,137 +130,138 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-ellipsis-h"></i>
-                        <p> Services <i class="fas fa-angle-left right"></i> </p>
+                        <p> Services <i class="fas fa-angle-right right"></i> </p>
                     </a>
 
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                                <a href="{{ route('servicecon.index') }}" class="nav-link">
+                            <a href="{{ route('servicecon.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage Content</p>
+                            </a>
+                        </li>
+                </li>
+            </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-file"></i>
+                    <p> Client <i class="fas fa-angle-right right"></i> </p>
+                </a>
+
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('client.index') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Manage Clients</p>
+                        </a>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-book"></i>
+                    <p> Media <i class="fas fa-angle-left right"></i> </p>
+                </a>
+
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="pages/examples/invoice.html" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Newsletter</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-copy"></i>
+                            <p>
+                                Blog
+                                <i class="fas fa-angle-right right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('blogcat.index') }}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Manage Content</p>
+                                    <p>Blog Category</p>
                                 </a>
                             </li>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-file"></i>
-                        <p> Client <i class="fas fa-angle-left right"></i> </p>
-                    </a>
 
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/examples/invoice.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Financial Institutions</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/profile.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Listed Companies</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/e-commerce.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>International Clients</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/projects.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Japanese Clients</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                            <li class="nav-item">
+                                <a href="{{ route('blog.index') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Blog-List</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p> Media <i class="fas fa-angle-left right"></i> </p>
-                    </a>
+                    <li class="nav-item">
+                        <a href="pages/examples/e-commerce.html" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Publications</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/examples/projects.html" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Gallery</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/examples/projects.html" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Events</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-book"></i>
+                    <p> Career <i class="fas fa-angle-left right"></i> </p>
+                </a>
 
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/examples/invoice.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Newsletter</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/profile.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Blog</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/e-commerce.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Publications</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/projects.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Gallery</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/projects.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Events</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p> Career <i class="fas fa-angle-left right"></i> </p>
-                    </a>
-
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/examples/invoice.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Professional</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/profile.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Articleship</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p>Regulators</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon far fa-envelope"></i>
-                        <p>Contact Us</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="pages/examples/invoice.html" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Professional</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/examples/profile.html" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Articleship</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-book"></i>
+                    <p>Regulators</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon far fa-envelope"></i>
+                    <p>Contact Us</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
+                    {{ __('Logout') }}
+                </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="">
-                        @csrf
-                    </form>
-                </li>
-                {{-- <li class="nav-item dropdown">
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="">
+                    @csrf
+                </form>
+            </li>
+            {{-- <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}

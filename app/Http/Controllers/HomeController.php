@@ -26,9 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $seeting = ThemeOptions::findOrFail(1);
+        $setting = ThemeOptions::findOrFail(1);
         $slider = Slider::all();
         $Whoweare = Whoweare::findOrFail(1);
-        return view('frontend.index', compact('seeting', 'slider', 'Whoweare'));
+        // $frontendMaster = view('frontend.layouts.master', compact('setting'));
+        return view('frontend.index', compact('setting', 'slider', 'Whoweare' ));
     }
 }
