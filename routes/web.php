@@ -120,7 +120,7 @@ Route::get('/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit'
 Route::put('/blog/update/{id}', [BlogController::class, 'update'])->name('blog.update');
 Route::delete('/blog/delete/{id}', [BlogController::class, 'destroy'])->name('blog.destroy');
 
-//  blog routes
+//  Service content  routes
 Route::get('/servicecon/index', [ServiceController::class, 'index'])->name('servicecon.index');
 Route::get('/servicecon/create', [ServiceController::class, 'create'])->name('servicecon.create');
 Route::post('/servicecon/store', [ServiceController::class, 'store'])->name('servicecon.store');

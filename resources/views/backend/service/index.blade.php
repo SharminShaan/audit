@@ -54,10 +54,10 @@
                             <td>{{ $catdata[0]->sub_cat_name }}</td>
 
                             <td>
-                                <a href="{{ route('subcategory.edit', $row->id) }}" class="btn btn-info btn-sm edit"><i
+                                <a href="{{ route('servicecon.edit', $row->id) }}" class="btn btn-info btn-sm edit"><i
                                         class="fas fa-edit"></i></a>
 
-                                <form action="{{ route('subcategory.destroy', $row->id) }}" method="POST">
+                                <form action="{{ route('servicecon.destroy', $row->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <a>

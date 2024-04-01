@@ -13,14 +13,16 @@ class ServiceController extends Controller
 {
     public function index()
     {
-        $data = Contents::where('subcats_id', '=', 8)->get();
+        // $data = Contents::get();
+        $data = Contents::where('category_id', '=', 2)->get();
         return view('backend.service.index', compact('data'));
     }
 
     public function create()
     {
+        $category = Category::where('id', '=', 2)->get();
         $datas = Sub_categories::where('cat_id', '=', 2)->get();
-        return view('backend.service.create', compact('datas'));
+        return view('backend.service.create', compact('datas', 'category'));
     }
 
     public function store(Request $request)
@@ -37,16 +39,19 @@ class ServiceController extends Controller
     public function edit($id)
     {
         $data = Contents::findorfail($id);
-        $catdatas = Category::get();
-        $catdatas = Sub_categories::get();
-        return view('backend.service.edit', compact('data', 'catdatas'));
+        $category = Category::where('id', '=', 2)->get();
+        $sub_cat = Sub_categories::where('cat_id', '=', 2)->get();
+        return view('backend.service.edit', compact('data','category', 'sub_cat'));
     }
 
     public function update(Request $request, $id)
     {
+
         $data['category_id'] = $request->category_id;
         $data['subcats_id'] = $request->subcats_id;
         $data['name'] = $request->name;
+        unset($data['category_id']);
+
 
         DB::table('contents')->where('id', $request->id)->update($data);
 

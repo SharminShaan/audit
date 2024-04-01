@@ -51,14 +51,14 @@
                                 <a href="{{ route('category.edit', $row->id) }}" class="btn btn-info btn-sm edit"><i
                                         class="fas fa-edit"></i></a>
 
-                                <form action="{{ route('category.destroy', $row->id) }}" method="POST">
+                                {{-- <form action="{{ route('category.destroy', $row->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <a>
                                         <button onclick="alert('Are You Sure Delete?')" type="submit" class="btn btn-sm btn-danger">Delete</button>
-                                        {{-- <i class="fas fa-trash"></i> --}}
+
                                     </a>
-                                </form>
+                                </form> --}}
 
 
 

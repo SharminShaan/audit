@@ -1,12 +1,3 @@
-categories table
-category_name
-
-sub_categories table
-cat_id, sub_cat_name,
-
-child_categories table
-cat_id, sub_cat_id, child_cat_name, image
-
 
 
 
@@ -80,99 +71,84 @@ type_id,type_name,name,email,phone,address,others,doc_file,service_type,long_des
 
 
 
-crud form:
-page setup crud:
+============== Crud form: ======================
+1. page setup crud:
 
 child_cat_id , title, short_description,image,image2,image3,
 
 
 ===about us==
 
-company profile:
+2. Company profile:
 title, file(pdf,doc),image, youtube,short_description,long_description,
 
 
-team:
+3. team:
 name, designation, short_description, email,phone, experience, image, facebook, twitter, instagram
 
-affiliation:
+4. affiliation:
 title, long_description,image
 
-enlistment:
-title, name, logo
+5. enlistment:
+title, name, logo, link
 
-membership:
-title,long_description,image
+6. membership:
+title,long_description,image, logo
 
 ====services===
 
-name,short_description , sub-cat   // 1 crud
+7. name,short_description , cat_id, sub_cat_id   // 1 crud  (Done)
 
-
-audit & assurance:
-name,short_description , sub-cat   // 1 crud
-
- ## taxation & vat:
-name, sub-cat
-
-advisory:
-name, sub-cat
-
-secretarial:
-name, sub-cat
-
-business service:
-name, sub-cat
-
-human resource service:
-name, sub-cat
-
-training & development:
-title, short_description, sub-cat   ##
 
 ===client====
-sub_cat_id,
+8. cat_id, sub_cat_id, name, logo, image,
 
-newsletter/e-bulletin,new sticker:
+9. newsletter/e-bulletin,new sticker:
 title, subtitle,long_description, image,doc_upload(pdf,doc)
 
-publications:
+10. publications:
 title, doc_upload
 
-gallary:
+11. gallary:
 title, short_description, image,image2,image3,image4, image5,image6
 
-events:
+12. events:
 title, long_description, image, doc_upload,date,time,venue
 
-
-career:
+13. career:
 job_title,vacancy,age,education, experience, responsibilities,compensation,
 employment_status, location,date(deadline)
 
-regulators:
+14. regulators:
 title,long_description,image,logo, link , cat_id
 
-contact us:
+15. contact us:
 title,address,phone,email,
 
 
 
-blog:
-blog_cat_name, title,date,uploaded_by,comment,long_description,short_description,blockquote,image,tags
-
-blog_category
-blog_cat_name
-
 ### Registration form:
 
-// event: name,email,phone,address, hidden(type_id,type_name,type=1)
+16. event: name,email,phone,address, hidden(type_id,type_name,type=1)
+
 //professional: name,email,phone,doc_file, hidden(type_id,type_name,type=2)
 //articleship: name,email,phone,doc_file, hidden(type_id,type_name,type=3)
 /publicationp-Download: name,email,phone, hidden(type_id,type_name,type=5)
-
 //contact:name,email,phone,service_type,long_description,hidden(type=4)
 
+
+17. blog:
+blog_cat_name, title,date,uploaded_by,comment,long_description,short_description,blockquote,image,tags // (Done)
+
+18. blog_category
+blog_cat_name // (Done)
+
+
+19. categories table // (Done)
+category_name
+
+20. sub_categories table // (Done)
+cat_id, sub_cat_name,
 
 
 

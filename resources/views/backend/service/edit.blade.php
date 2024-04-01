@@ -1,17 +1,17 @@
 @extends('backend.layouts.master')
-@section('title', 'Edit-Subcategory')
+@section('title', 'Edit-service')
 @section('content')
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Edit Subcategory </h1>
+                    <h1>Edit Service Content </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{ url('/subcategory/index') }}">Subcategory</a></li>
-                        <li class="breadcrumb-item active">Edit Subcategory</li>
+                        <li class="breadcrumb-item"><a href="{{ url('/servicecon/index') }}">All Service Content</a></li>
+                        <li class="breadcrumb-item active">Edit Service Content</li>
                     </ol>
                 </div>
             </div>
@@ -28,12 +28,12 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Edit Subcategory</h3>
+                            <h3 class="card-title">Edit Service Content</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
                         {{-- <form action="{{ route('subcategory.update', $data->id) }}" method="Post" --}}
-                        <form action="{{ route('subcategory.update', ['id' => $data->id]) }}" method="Post"
+                        {{-- <form action="{{ route('servicecon.update', ['id' => $data->id]) }}" method="Post"
                             enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
@@ -41,25 +41,17 @@
 
 
                             <div class="form-group">
-                                <label for="category_name">Subcategory Name</label>
-                                <input type="text" class="form-control" name="sub_cat_name" required
-                                    value="{{ $data->sub_cat_name }}">
+                                <label for="name">Service Name</label>
+                                <input type="text" class="form-control" name="name" required
+                                    value="{{ $data->name }}">
                             </div>
 
-
-
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Image</label>
-                                <input type="file" class="form-control" name="image"> <br>
-                                <img src="{{ asset('backendsite/images/' . $data->image) }}" alt="Subcat-image"
-                                    width="100">
-                            </div>
 
                             <br>
                             <div class="form-group mb-3">
                                 @php
                                     $cat_id = $data->cat_id;
-                                    $catdata = DB::table('categories')->where('id', '=', $cat_id)->get();
+                                    $catdata = DB::table('sub_categories')->where('id', '=', $cat_id)->get();
                                 @endphp
 
                                 <label for="exampleInputEmail1" class="form-label">Parent Category</label>
@@ -69,6 +61,41 @@
 
                                     @foreach ($catdatas as $data)
                                         <option value="{{ $data->id }}">{{ $data->category_name }}</option>
+                                    @endforeach
+
+                                </select>
+                            </div>
+
+                            <button type="Submit" class="btn btn-primary">Update</button>
+
+                        </form> --}}
+
+                        <form action="{{ route('servicecon.update', $data->id) }}" method="Post"
+                            enctype="multipart/form-data">
+                            @csrf
+                            @method('PUT')
+
+                            <div class="form-group">
+                                <label for="name">Service Name</label>
+                                <input type="text" class="form-control" name="name" required
+                                    value="{{ $data->name }}">
+                            </div>
+
+                            <br>
+                            <div class="form-group mb-3">
+
+                                @php
+                                    $cat_id = $data->subcats_id;
+                                    $catdata = DB::table('sub_categories')->where('id', '=', $cat_id)->get();
+                                @endphp
+
+                                <label for="exampleInputEmail1" class="form-label">Sub-Category</label>
+                                <select name="subcats_id" id="" required>
+                                    <option value="{{ $catdata[0]->id }}" selected> {{ $catdata[0]->sub_cat_name }}
+                                    </option>
+
+                                    @foreach ($sub_cat as $data)
+                                        <option value="{{ $data->id }}">{{ $data->sub_cat_name }}</option>
                                     @endforeach
 
                                 </select>

@@ -48,7 +48,14 @@
                             <td>{{ $key + 1 }}</td>
                             <td>{{ $row->sub_cat_name }}</td>
                             <td>
-                                <img src="{{ asset('backendsite/images/' . $row->image) }}" alt="Subcat-image" width="100">
+                                @if ($row->image)
+                                    {
+                                    <img src="{{ asset('backendsite/images/' . $row->image) }}" alt="Subcat-image"
+                                        width="100">
+                                    }
+                                    @else
+                                        Image Not set
+                                @endif
                             </td>
                             @php
                                 $cat_id = $row->cat_id;
@@ -59,16 +66,15 @@
                             <td>
                                 <a href="{{ route('subcategory.edit', $row->id) }}" class="btn btn-info btn-sm edit"><i
                                         class="fas fa-edit"></i></a>
-
+                                {{--
                                 <form action="{{ route('subcategory.destroy', $row->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <a>
                                         <button onclick="alert('Do You Want to Delete?')" type="submit"
                                             class="btn btn-sm btn-danger">Delete</button>
-                                        {{-- <i class="fas fa-trash"></i> --}}
                                     </a>
-                                </form>
+                                </form> --}}
 
 
 

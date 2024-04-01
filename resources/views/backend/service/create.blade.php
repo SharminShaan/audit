@@ -37,8 +37,20 @@
                             @csrf
 
                             <br>
+
                             <div class="form-group">
-                                <label for="exampleInputEmail1" class="form-label">Sub-Category</label>
+                                <label  class="form-label">Parent Category</label>
+                                <select name="category_id"  required>
+
+                                    @foreach ($category as $cat )
+                                        <option selected value="{{ $cat->id }}">{{ $cat->category_name }}</option>
+                                    @endforeach
+
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="form-label">Sub-Category</label>
                                 <select name="subcats_id" id="" required>
                                     <option value="" disabled selected>Select one</option>
 
