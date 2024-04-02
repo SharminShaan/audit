@@ -73,18 +73,16 @@ type_id,type_name,name,email,phone,address,others,doc_file,service_type,long_des
 
 ============== Crud form: ======================
 1. page setup crud:
-
-child_cat_id , title, short_description,image,image2,image3,
-
+category_id, subcats_id, title, short_description,image,image2,image3, type(1) // done
 
 ===about us==
 
 2. Company profile:
-cat_id, sub_cat_id, title, file(pdf,doc),image, youtube,short_description,long_description,
+cat_id, sub_cat_id, title, file(pdf,doc),image, youtube,short_description,long_description, //(done)
 
 
 3. team:
-cat_id, sub_cat_id,name, designation, specialization,short_description, email,phone, experience, image, facebook, twitter, instagram
+cat_id, sub_cat_id,name, designation, specialization,short_description, email,phone, experience, image, facebook, twitter, instagram  //( Edit Remaining )
 
 4. affiliation:
 cat_id, sub_cat_id, title, long_description,image, link //(done)
@@ -100,30 +98,33 @@ cat_id, sub_cat_id, title,long_description,image, logo, link
 7. name,short_description , cat_id, sub_cat_id   // 1 crud  (Done)  [ logo, link]
 
 
-===client====
+======== client =========
 8. cat_id, sub_cat_id, name, logo, image, // (done)
 
+====== Media  =========
+
 9. newsletter/e-bulletin,new sticker:
-title, subtitle,long_description, image,doc_upload(pdf,doc)
+cat_id, sub_cat_id, title, subtitle,long_description, image,doc_upload(pdf,doc)
 
 10. publications:
-title, doc_upload
+cat_id, sub_cat_id,title, doc_upload
 
 11. gallary:
-title, short_description, image,image2,image3,image4, image5,image6
+cat_id, sub_cat_id,title, short_description, image,image2,image3,image4, image5,image6
 
 12. events:
-title, long_description, image, doc_upload,date,time,venue
+cat_id, sub_cat_id, title, long_description, image, doc_upload,date,time,venue
 
-13. career:
-job_title,vacancy,age,education, experience, responsibilities,compensation,
-employment_status, location,date(deadline)
+========= career =========
+13. Professional & articleship:
+cat_id, sub_cat_id, job_title,vacancy,age,education, experience, responsibilities,compensation,
+employment_status, location,date(deadline), type (2=professional, 3=articleship)
 
 14. regulators:
 cat_id, title,long_description,image,logo, link ,
 
 15. contact us:
-title,address,phone,email,
+cat_id, title,address,phone,email, map1, map2
 
 
 
@@ -133,8 +134,9 @@ title,address,phone,email,
 
 //professional: name,email,phone,doc_file, hidden(type_id,type_name,type=2)
 //articleship: name,email,phone,doc_file, hidden(type_id,type_name,type=3)
-/publicationp-Download: name,email,phone, hidden(type_id,type_name,type=5)
 //contact:name,email,phone,service_type,long_description,hidden(type=4)
+/publicationp-Download: name,email,phone, hidden(type_id,type_name,type=5)
+
 
 
 17. blog:

@@ -8,7 +8,9 @@ use App\Http\Controllers\backend\ServiceController;
 use App\Http\Controllers\backend\ClientController;
 use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\ProfileController;
+use App\Http\Controllers\backend\TeamController;
 use App\Http\Controllers\backend\homepage\WhoweareController;
+use App\Http\Controllers\backend\PagesetupController;
 use App\Http\Controllers\backend\SliderController;
 use App\Http\Controllers\backend\ThemeOptionsController;
 use App\Http\Controllers\FrontendController;
@@ -162,3 +164,19 @@ Route::delete('/affiliation/delete/{id}', [AffiliationController::class, 'destro
 //company profile
 Route::get('/profile', [ProfileController::class, 'index'])->name('about.profile');
 Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+
+//team routes
+Route::get('/team/index', [TeamController::class, 'index'])->name('team.index');
+Route::get('/team/create', [TeamController::class, 'create'])->name('team.create');
+Route::post('/team/store', [TeamController::class, 'store'])->name('team.store');
+Route::get('/team/edit/{id}', [TeamController::class, 'edit'])->name('team.edit');
+Route::put('/team/update/{id}', [TeamController::class, 'update'])->name('team.update');
+Route::delete('/team/delete/{id}', [TeamController::class, 'destroy'])->name('team.destroy');
+
+//  Page setup routes
+Route::get('/pagesetup/index', [PagesetupController::class, 'index'])->name('pagesetup.index');
+Route::get('/pagesetup/create', [PagesetupController::class, 'create'])->name('pagesetup.create');
+Route::post('/pagesetup/store', [PagesetupController::class, 'store'])->name('pagesetup.store');
+Route::get('/pagesetup/edit/{id}', [PagesetupController::class, 'edit'])->name('pagesetup.edit');
+Route::put('/pagesetup/update/{id}', [PagesetupController::class, 'update'])->name('pagesetup.update');
+Route::delete('/pagesetup/delete/{id}', [PagesetupController::class, 'destroy'])->name('pagesetup.destroy');

@@ -19,30 +19,13 @@
                     </a>
 
                 </li>
-                <li class="nav-item">
-                    <a href="{{ route('themeoptions.index') }}" class="nav-link">
-                        <i class="nav-icon far fa-plus-square"></i>
-                        <p>
-                            ThemeOptions
 
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('slider.index') }}" class="nav-link">
-                        <i class="nav-icon far fa-plus-square"></i>
-                        <p>
-                            Slider
-
-                        </p>
-                    </a>
-                </li>
 
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
-                            Page Category
+                            Page
                             <i class="fas fa-angle-right right"></i>
                         </p>
                     </a>
@@ -60,6 +43,13 @@
                             </a>
                         </li>
 
+                        <li class="nav-item">
+                            <a href="{{ route('pagesetup.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Page Setup </p>
+                            </a>
+                        </li>
+
                     </ul>
                 </li>
 
@@ -71,18 +61,32 @@
                     </a>
 
                     <ul class="nav nav-treeview">
+
+                        <li class="nav-item">
+                            <a href="{{ route('themeoptions.index') }}" class="nav-link">
+                                <i class="nav-icon far fa-plus-square"></i>
+                                <p>
+                                    ThemeOptions
+
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('slider.index') }}" class="nav-link">
+                                <i class="nav-icon far fa-plus-square"></i>
+                                <p>
+                                    Slider
+                                </p>
+                            </a>
+                        </li>
+
                         <li class="nav-item">
                             <a href="{{ route('homepage.whoweare') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="nav-icon far fa-plus-square"></i>
                                 <p>Who We Are</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/profile.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Meet Our Team</p>
-                            </a>
-                        </li>
+
 
 
                     </ul>
@@ -95,13 +99,13 @@
 
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/examples/invoice.html" class="nav-link">
+                            <a href="{{ route('about.profile') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Company Profile</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/examples/profile.html" class="nav-link">
+                            <a href="{{ route('team.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Meet Our Team</p>
                             </a>

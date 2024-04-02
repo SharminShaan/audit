@@ -37,6 +37,16 @@
                                     <div class="card-body">
 
                                         <div class="form-group">
+                                            <input type="hidden" class="form-control" id="category_id" name="category_id"
+                                                value="{{ $data->category_id }}">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="hidden" class="form-control" id="subcats_id" name="subcats_id"
+                                                value="{{ $data->subcats_id }}">
+                                        </div>
+
+                                        <div class="form-group">
                                             <label for="heading">Title </label>
                                             <input type="text" class="form-control" id="heading" name="title"
                                                 value="{{ $data->title }}">
@@ -44,73 +54,41 @@
 
                                         <div class="form-group">
                                             <label for="subheading">Short Paragraph</label>
-                                            <text type="text" class="form-control" id="subheading" name="short_description"
-                                                value="{{ $data->short_description }}">
+                                            <textarea class="form-control" id="subheading" rows="3" name="short_description">{{ $data->short_description }}</textarea>
                                         </div>
 
                                         <div class="mb-3">
-                                            <label for="exampleFormControlTextarea1" class="form-label"> Paragraph</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="paragraph">{{ $whoweare->paragraph }}</textarea>
+                                            <label for="details" class="form-label">Long Paragraph</label>
+                                            <textarea class="form-control" id="details" rows="3" name="long_description">{{ $data->long_description }}</textarea>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="exampleInputFile">Who We Are Image 01</label>
-                                            <small>[ Image must be 439*508 px ]</small>
-                                            <input type="file" class="form-control" name="image1">
+                                            <label for="exampleInputFile">Image</label>
+                                            <input type="file" class="form-control" name="image">
                                         </div>
+                                        @isset($data->image)
+                                        <img src="{{ asset('backendsite/images/' . $data->image) }}"
+                                            width="100px"alt="Profile Image">
+                                        @endisset
 
-                                        <img src="{{ asset('backendsite/images/homepage/' . $whoweare->image1) }}"
-                                            width="100px"alt="Who We are Image">
 
                                         <div class="form-group">
-                                            <label for="exampleInputFile">Who We Are Image 02</label>
-                                            <small>[ Image must be 247*247 px ]</small>
-                                            <input type="file" class="form-control" name="image2">
+                                            <label for="exampleInputFile">Youtube</label>
+                                            <input type="text" class="form-control" name="youtube" value="{{ $data->youtube }}" >
                                         </div>
 
-                                        <img src="{{ asset('backendsite/images/homepage/' . $whoweare->image2) }}"
-                                            width="100px"alt="Who We are Image">
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File_Upload</label>
+                                            <input type="file" class="form-control" name="file_upload">
+                                        </div>
+
+                                        @isset($data->file_upload)
+                                        <a href="{{ asset('/backendsite/fileupload/'. $data->file_upload)}}" target="_blank" download class="download-btn"><i class="far fa-file-pdf"></i>PDF- {{$data->file_upload}}</a>
+                                        @endisset
 
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="list1">List Text 1</label>
-                                        <input type="text" class="form-control" id="list1" name="list1"
-                                            value="{{ $whoweare->list1 }}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="list2">List Text 2</label>
-                                        <input type="text" class="form-control" id="list2" name="list2"
-                                            value="{{ $whoweare->list2 }}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="list3">List Text 3</label>
-                                        <input type="text" class="form-control" id="list3" name="list3"
-                                            value="{{ $whoweare->list3 }}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="list4">List Text 4</label>
-                                        <input type="text" class="form-control" id="list4" name="list4"
-                                            value="{{ $whoweare->list4 }}">
-                                    </div>
 
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlTextarea1" class="form-label">Bottom Paragraph</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="bottomparagraph">{{ $whoweare->bottomparagraph }}</textarea>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="yearsparagraph">Years</label>
-                                        <input type="number" class="form-control" id="years" name="years"
-                                            value="{{ $whoweare->years }}">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="years">Years Text</label>
-                                        <input type="text" class="form-control" id="yearsparagraph"
-                                            name="yearsparagraph" value="{{ $whoweare->yearsparagraph }}">
-                                    </div>
                                 </div>
                             </div>
                             <div class="card-footer">

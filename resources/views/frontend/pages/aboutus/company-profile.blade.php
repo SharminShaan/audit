@@ -86,7 +86,7 @@
                 <h4 class="sw-title">Company Brochure</h4>
                 <div class="services-brochure-wrap">
                     <p>when an unknown printer took galley offer typey anddey.</p>
-                    <a href="{{ asset('frontend/assets/img/services/services_details01.jpg')}}" target="_blank" download class="download-btn"><i class="far fa-file-pdf"></i>PDF. Download</a>
+                    <a href="{{ asset('/backendsite/fileupload/1712038947.pdf')}}" target="_blank" download class="download-btn"><i class="far fa-file-pdf"></i>PDF. Download</a>
                     <a href="{{ asset('frontend/assets/img/services/services_details01.jpg')}}" target="_blank" download class="download-btn"><i class="far fa-file-alt"></i>DOC. Download</a>
                 </div>
             </div>
